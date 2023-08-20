@@ -183,6 +183,7 @@ class ViewController: UIViewController {
         let passwordToBrute = passwordTextField.text ?? ""
         activityView.startAnimating()
         bruteControlButton.isHidden = false
+        label.text = ""
         workItem = DispatchWorkItem {
             self.bruteForce(passwordToUnlock: passwordToBrute)
             if self.continueTask {
